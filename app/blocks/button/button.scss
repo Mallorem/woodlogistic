@@ -1,0 +1,15 @@
+.button {
+    width: 200px;
+    border: none;
+    background-color: $brown;
+    color: $white;
+    padding: 10px;
+    margin: 10px auto;
+    display: block;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $yellow;
+    }
+
+}

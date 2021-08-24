@@ -1,0 +1,79 @@
+.tabs {
+    position: relative;
+    margin: 0 0 50px 0;
+
+    &::before {
+        content: "";
+        position: absolute;
+        height: 50px;
+        width: 100%;
+        background-color: $brown;
+    }
+
+    &__items {
+        display: flex;
+    }
+
+    &__item {
+        flex: 0 1 25%;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: $white;
+        text-align: center;
+        position: relative;
+        z-index: 2;
+    }
+
+    &__block {
+        font-style: 18px;
+        line-height: 24px;
+        display: none;
+        position: relative;
+
+        &:nth-child(1) {
+
+            &::before {
+                left: calc((100% - 1280px) / 2);
+                width: 320px;
+            }
+        }
+
+        &:nth-child(2) {
+
+            &::before {
+                left: 25%;
+            }
+        }
+
+        &:nth-child(3) {
+
+            &::before {
+                left: 50%;
+            }
+        }
+
+        &:nth-child(4) {
+
+            &::before {
+                right: 0;
+            }
+        }
+
+        &:target {
+            display: block;
+        }
+
+        &::before {
+            content: "";
+            height: 50px;
+            width: 25%;
+            position: absolute;
+            top: -50px;
+            background-color: $yellow;
+        }
+    }
+}

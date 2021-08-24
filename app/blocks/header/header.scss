@@ -1,0 +1,40 @@
+.header {
+    width: 100%;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px 0;
+    }
+
+    &__contacts {
+        display: flex;
+        flex-direction: column;
+    }
+
+    
+    &__contacts-item {
+        color: $yellow;
+        text-decoration: none;
+        padding: 5px 0;
+        display: flex;
+        align-items: center;
+
+        svg {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            fill: $yellow;
+
+            
+        }
+
+        &:hover {
+            color: $brown;
+            svg {
+                fill: $brown;
+            }
+        }
+    }
+}
