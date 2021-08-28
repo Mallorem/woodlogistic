@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
   <meta charset="UTF-8">
@@ -58,12 +58,18 @@
   <main class="main page__main">
     <div class="container">
       <div class="tabs">
-        <nav class="tabs__items page__container">
-          <a href="#about" class="tabs__item tabs__item_active"><span>О НАС</span></a>
-          <a href="#services" class="tabs__item"><span>НАШИ УСЛУГИ</span></a>
-          <a href="#documents" class="tabs__item"><span>КЛИЕНТАМ</span></a>
-          <a href="#contacts" class="tabs__item"><span>КОНТАКТЫ</span></a>
-        </nav>
+        <div class="menu" data-tab="О НАС">
+          <div class="menu__icon">
+            <span></span>
+          </div>
+          <nav class="tabs__items page__container menu__body">
+            <a href="#about" class="tabs__item tabs__item_active menu__item"><span>О НАС</span></a>
+            <a href="#services" class="tabs__item menu__item"><span>НАШИ УСЛУГИ</span></a>
+            <a href="#documents" class="tabs__item menu__item"><span>КЛИЕНТАМ</span></a>
+            <a href="#contacts" class="tabs__item menu__item"><span>КОНТАКТЫ</span></a>
+          </nav>
+        </div>
+        
         <div class="tabs__body">
           <div id="about" class="tabs__block tabs__block_active about">
             <div class="about__promo">

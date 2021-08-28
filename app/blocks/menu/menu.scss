@@ -1,3 +1,103 @@
 .menu {
-    
+    height: 50px;
+    width: 100%;
+    background-color: $brown;
+    display: flex;
+    align-items: center;
+
+    @media screen and (max-width: 800px) {
+        padding: 0 24px;
+        height: 70px;
+
+        &::before {
+            content: attr(data-tab);
+            order: 2;
+            color: $white;
+            font-size: 18px;
+        }
+    }
+
+    &__icon {
+        display: none;
+
+        @media screen and (max-width: 800px) {
+            z-index: 5;
+            display: block;
+            position: relative;
+            height: 20px;
+            cursor: pointer;
+            margin-left: auto;
+            font-size: 18px;
+            line-height: 19px;
+            margin-left: 0;
+            order: 1;
+            margin-right: 24px;
+            width: 25px;
+
+            & span,
+            &::before,
+            &::after {
+                left: 0;
+                position: absolute;
+                height: 2px;
+                width: 25px;
+                transition: all 0.3s ease 0s;
+                background-color: $white;
+            }
+
+            &::before,
+            &::after {
+                content: "";
+            }
+
+            &::before {
+                top: 0;
+            }
+
+            &::after {
+                bottom: 0;
+            }
+
+            & span {
+                top: 50%;
+                transform: scale(1) translate(0, -50%);
+            }
+
+            &_active {
+                span {
+                    transform: scale(0) translate(0, -50%);
+                }
+
+                &::before {
+                    top: 50%;
+                    transform: rotate(-45deg) translate(0, -50%);
+                }
+
+                &::after {
+                    bottom: 50%;
+                    transform: rotate(45deg) translate(0, 50%);
+                }
+            }
+        }
+    }
+
+    &__body {
+        @media screen and (max-width: 800px) {
+            &.tabs__items {
+                display: none;
+            }
+
+            &_active {
+                &.tabs__items {
+                    display: block;
+                    position: absolute;
+                    top: 70px;
+                    left: 0;
+                    background-color: $brown;
+                    height: auto;
+                    z-index: 4;
+                }
+            }
+        }
+    }
 }

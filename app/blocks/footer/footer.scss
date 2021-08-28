@@ -9,6 +9,13 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        flex-wrap: wrap;
+
+        @media screen and (max-width: 800px) {
+            padding: 0 24px;
+            justify-content: center;
+            text-align: center;
+        }
     }
 
     &__logo {
@@ -16,6 +23,10 @@
             width: 400px;
             height: auto;
             object-fit: contain;
+
+            @media screen and (max-width: 800px) {
+                width: 200px;
+            }
         }
     }
     

@@ -1,17 +1,29 @@
 .documents {
     padding-top: 80px;
     max-width: 100%;
+
+    @media screen and (max-width: 800px) {
+        padding: 40px 24px;
+    }
     
     &__imgs {
         display: flex;
         justify-content: space-between;
         margin-top: 80px;
         max-width: 100%;
+
+        @media screen and (max-width: 600px) {
+            flex-direction: column;
+        }
     }
 
     &__img {
-        flex: 1 0 49%;
-        width: 49%;
+        flex: 0 1 49%;
+        min-width: 0;
         max-width: 600px;
+        
+        @media screen and (max-width: 800px) {
+            margin-bottom: 20px;
+        }
     }
 }

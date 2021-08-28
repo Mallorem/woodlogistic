@@ -17,6 +17,12 @@
             height: 100%;
             background-color: rgba($color: $brown, $alpha: 0.6);
         }
+
+        @media screen and (max-width: 800px) {
+            max-width: 100%;
+            height: 400px;
+            padding: 30px 24px;
+        }
     }
 
     &__title {
@@ -27,6 +33,10 @@
         text-align: center;
         color: $white;
 
+        @media screen and (max-width: 800px) {
+            font-size: 40px;
+            line-height: 50px;
+        }
 
         &::before {
             content: "";
@@ -59,6 +69,10 @@
 
     &__benefits {
         padding-top: 80px;
+
+        @media screen and (max-width: 800px) {
+            padding: 30px 24px;
+        }
     }
 
     &__benefits-title {
@@ -70,10 +84,18 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+
+        @media screen and (max-width: 800px) {
+            padding: 30px 24px;
+        }
     }
 
     &__benefits-item {
         flex: 0 1 45%;
+
+        @media screen and (max-width: 800px) {
+            flex: 1 0 100%;
+        }
     }
 
     &__company-info {
@@ -87,6 +109,10 @@
         justify-content: center;
         align-items: center;
         position: relative;
+
+        @media screen and (max-width: 800px) {
+            background-image: none;
+        }
     }
 
     &__company-text {
@@ -95,7 +121,18 @@
         margin-right: auto;
         width: 50%;
         height: 100%;
+        min-height: 600px;
         background-color: $brown;
+
+        @media screen and (max-width: 1200px) {
+            width: 70%;
+        }
+
+        @media screen and (max-width: 900px) {
+            width: 100%;
+            margin-left: 0;
+            padding: 30px 24px;
+        }
 
         p {
             margin-top: 80px;

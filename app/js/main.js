@@ -1,6 +1,7 @@
 if (document.readyState === 'loading') {
 
     document.addEventListener("DOMContentLoaded", function (event) {
+        // tabs
         let aboutTabItem = document.querySelector(".tabs__item[href='#about']");
 
         const tabs = document.querySelectorAll(".tabs__item");
@@ -30,20 +31,30 @@ if (document.readyState === 'loading') {
             })
         }
 
-        // Dispatch the event.
         aboutTabItem.click();
 
-        // menu 
-        // const toggleActiveClasses = () => {
-        //     document.body.classList.toggle('page_lock');
-        //     iconMenu.classList.toggle('menu__icon_active');
-        //     menuBody.classList.toggle('menu__body_active');
-        // }
+        // menu for mobile
+        const toggleActiveClasses = () => {
+            menuBody.classList.toggle('menu__body_active');
+        }
 
-        // const iconMenu = document.querySelector('.menu__icon');
-        // const menuBody = document.querySelector('.menu__body');
+        const changeMenuSignature = (name) => {
+            console.log('!!!!!!!!!!!!!')
+            menu.setAttribute('data-tab', name)
+        }
+        
+        const menu = document.querySelector('.menu');
+        const iconMenu = document.querySelector('.menu__icon');
+        const menuBody = document.querySelector('.menu__body');
+        const menuItems = document.querySelectorAll('.menu__item');
 
-        // if (iconMenu) iconMenu.addEventListener('click', toggleActiveClasses)
+        for (let i = 0; i < menuItems.length; i++) {
+            let menuItem = menuItems[i];
+            const menuItemName = menuItem.textContent;
+            menuItem.addEventListener('click', () => {toggleActiveClasses(); changeMenuSignature(menuItemName)})
+        }
+
+        if (iconMenu) iconMenu.addEventListener('click', toggleActiveClasses)
 
     });
 }

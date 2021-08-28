@@ -2,13 +2,7 @@
     position: relative;
     margin: 0 0 50px 0;
 
-    &::before {
-        content: "";
-        position: absolute;
-        height: 50px;
-        width: 100%;
-        background-color: $brown;
-    }
+    
 
     &__items {
         display: flex;
