@@ -4,10 +4,7 @@
         background-position: center;
         height: 600px;
         color: $brown;
-        display: flex;
         max-width: 100%;
-        justify-content: center;
-        align-items: center;
         position: relative;
 
         @media screen and (max-width: 800px) {
@@ -27,6 +24,14 @@
         background-color: rgba($color: $brown, $alpha: 0.6);
     }
 
+    &__promo-container {
+        display: flex;
+        max-width: 100%;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
     &__title {
         position: relative;
         font-size: 52px;
@@ -35,6 +40,7 @@
         color: $white;
         max-width: 100%;
         width: 100%;
+        margin: 0;
 
         @media screen and (max-width: 800px) {
             font-size: 40px;
