@@ -39,10 +39,9 @@ if (document.readyState === 'loading') {
         }
 
         const changeMenuSignature = (name) => {
-            console.log('!!!!!!!!!!!!!')
             menu.setAttribute('data-tab', name)
         }
-        
+
         const menu = document.querySelector('.menu');
         const iconMenu = document.querySelector('.menu__icon');
         const menuBody = document.querySelector('.menu__body');
@@ -51,11 +50,16 @@ if (document.readyState === 'loading') {
         for (let i = 0; i < menuItems.length; i++) {
             let menuItem = menuItems[i];
             const menuItemName = menuItem.textContent;
-            menuItem.addEventListener('click', () => {toggleActiveClasses(); changeMenuSignature(menuItemName)})
+            menuItem.addEventListener('click', () => {
+                if (getComputedStyle(iconMenu).display !== 'none') {
+                    toggleActiveClasses();
+                }
+                
+                changeMenuSignature(menuItemName);
+            })
         }
 
-        if (iconMenu) iconMenu.addEventListener('click', toggleActiveClasses)
-
+        if (iconMenu) iconMenu.addEventListener('click', toggleActiveClasses);
     });
 }
 
