@@ -33,6 +33,15 @@
             order: 1;
             margin-right: 24px;
             width: 25px;
+            -webkit-tap-highlight-color: rgba(0,0,0,0);
+
+            &:active {
+                & span,
+                &::before,
+                &::after {
+                    background-color: $yellow;
+                }
+            }
 
             & span,
             &::before,
