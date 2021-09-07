@@ -16,7 +16,6 @@
     }
 
     &__list {
-        
         margin-top: 50px;
     }
 
@@ -62,6 +61,11 @@
     &__name {
         color: $yellow;
         margin-bottom: 10px;
+    }
+
+    &__value {
+        text-decoration: none;
+        color: $black;
     }
 
     &__map {
