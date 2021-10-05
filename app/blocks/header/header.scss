@@ -19,7 +19,7 @@
     }
 
     &__contacts-item {
-        color: $yellow;
+        color: $brown;
         text-decoration: none;
         padding: 5px 0;
         display: flex;
@@ -29,13 +29,13 @@
             width: 20px;
             height: 20px;
             margin-right: 10px;
-            fill: $yellow;
+            fill: $brown;
         }
 
         &:hover {
-            color: $brown;
+            color: $yellow;
             svg {
-                fill: $brown;
+                fill: $yellow;
             }
         }
     }

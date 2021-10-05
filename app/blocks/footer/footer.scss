@@ -3,7 +3,7 @@
     padding: 40px 0;
     font-size: 12px;
     line-height: 23px;
-    background-color: $yellow;
+    background-color: $brown;
 
     &__container {
         display: flex;
@@ -38,6 +38,10 @@
         font-size: 20px;
         line-height: 20px;
         margin-bottom: 20px;
+
+        &:hover {
+            color: $yellow;
+        }
     }
 
     @media screen and (max-width: 800px) {
