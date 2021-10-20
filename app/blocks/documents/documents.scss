@@ -13,7 +13,7 @@
         margin-top: 80px;
         max-width: 100%;
 
-        @media screen and (max-width: 600px) {
+        @media screen and (max-width: 768px) {
             flex-direction: column;
         }
     }
@@ -23,8 +23,9 @@
         max-width: 49%;
         height: auto;
         object-fit: contain;
+        border: 5px solid rgba($color: $brown, $alpha: 0.1);
 
-        @media screen and (max-width: 800px) {
+        @media screen and (max-width: 768px) {
             margin-bottom: 20px;
             flex: 0 0 auto;
             max-width: 100%;

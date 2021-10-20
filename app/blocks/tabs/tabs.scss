@@ -7,7 +7,7 @@
     }
 
     &__item {
-        flex: 0 1 25%;
+        flex: 0 1 12%;
         height: 50px;
         display: flex;
         justify-content: center;
@@ -27,7 +27,7 @@
     }
 
     &__block {
-        font-style: 18px;
+        font-size: 18px;
         line-height: 24px;
         display: none;
         position: relative;
